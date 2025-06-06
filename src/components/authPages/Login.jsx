@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {toast} from 'react-hot-toast';
 import { authManager } from '../../utils/localUser';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -73,6 +73,7 @@ export default function Login() {
                     >
                         Login
                     </button>
+                    <div className='text-center'>Did Not Have Account? <Link className='text-blue-500' to="/signup">Sign Up</Link></div>
                 </form>
             </div>
         </div>

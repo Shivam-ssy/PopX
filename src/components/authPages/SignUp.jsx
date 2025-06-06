@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { authManager } from '../../utils/localUser';
 import { toast, Toaster } from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function PopXCreateAccount() {
     const navigate = useNavigate()
@@ -181,6 +181,7 @@ export default function PopXCreateAccount() {
                     >
                         Create Account
                     </button>
+                    <div className='text-center'>Already Have Account? <Link className='text-blue-500' to="/login">Login</Link></div>
                 </form>
             </div>
         </div>
